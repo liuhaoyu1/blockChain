@@ -1,12 +1,13 @@
 import React, { PureComponent } from 'react';
 import { View, TouchableOpacity, Text, Image } from 'react-native';
-interface Props {
+import { SafeAreaView } from 'react-navigation'
 
-}
-interface State {
-
-}
-class Home extends PureComponent<Props,State> {
+class Home extends PureComponent {
+    static navigationOptions = ({ navigation }) => {
+        return {
+          header: null,
+        }
+      }
 
     constructor(props) {
         super(props)
@@ -14,9 +15,9 @@ class Home extends PureComponent<Props,State> {
     
     render() {
         return (
-            <View>
+            <SafeAreaView style={{flex:1}}>
                 <Text>Home</Text>
-            </View>
+            </SafeAreaView>
         )
     }
 
