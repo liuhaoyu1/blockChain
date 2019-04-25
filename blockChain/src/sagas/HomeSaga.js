@@ -1,11 +1,15 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-
+import { delay } from 'redux-saga';
 import * as ActionsTypes from '../redux/actions/actionTypes';
 
-function* member_add({type, payload}) {
-    yield put({type: 'SUCCESS_MEMBER_ADD'})
+function* memberAdd({type, payload}) {
+    console.log('payload',payload)
+    yield put({type: ActionsTypes.SUCCESS_MEMBER_ADD,payload})
 }
 
-export default function* rootSaga() {
-    yield takeLatest(ActionsTypes.REQUEST_MEMBER_ADD, member_add)
+
+function* rootSaga() {
+    yield takeLatest(ActionsTypes.REQUEST_MEMBER_ADD, memberAdd);
 }
+
+export default rootSaga;

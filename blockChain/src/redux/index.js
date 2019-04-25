@@ -6,6 +6,7 @@ import rootSaga from '../sagas';
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
     rootReducer,
+    window.devToolsExtension ? window.devToolsExtension() : undefined,
     applyMiddleware(sagaMiddleware)
 )
 sagaMiddleware.run(rootSaga);
