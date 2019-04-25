@@ -10,21 +10,16 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, StatusBar} from 'react-native';
 import AppNavigation from './src/navigation/AppNavigation'
 // type Props = {};
+import { Provider } from 'react-redux';
+import store from './src/redux';
+
 export default class App extends Component{
+
   render() {
     return (
-      <View style={styles.container}>
-          {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+      <Provider store={store}>
           <AppNavigation />
-      </View>
+      </Provider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  
-});

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { View, TouchableOpacity, Text, Image } from 'react-native';
 import { SafeAreaView } from 'react-navigation'
-
+import { connect } from 'react-redux'
 class Home extends PureComponent {
     static navigationOptions = ({ navigation }) => {
         return {
@@ -23,4 +23,15 @@ class Home extends PureComponent {
 
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+    return {
+
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
