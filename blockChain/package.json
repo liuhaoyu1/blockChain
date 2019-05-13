@@ -8,14 +8,18 @@
   },
   "dependencies": {
     "@ant-design/react-native": "^3.1.6",
+    "en-letter": "^1.0.0",
+    "native-base": "^2.12.1",
     "react": "16.8.3",
     "react-native": "0.59.5",
     "react-native-gesture-handler": "^1.1.0",
+    "react-native-svg": "^9.4.0",
     "react-navigation": "^3.8.1",
     "react-redux": "^7.0.2",
     "redux": "^4.0.1",
     "redux-actions": "^2.6.5",
-    "redux-saga": "^1.0.2"
+    "redux-saga": "^1.0.2",
+    "victory-native": "^32.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
